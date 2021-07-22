@@ -315,4 +315,174 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   font-size: 1.2em;
   font-weight: 600;
 }
+
+/***** Restaurants *****/
+#restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 2em;
+  margin-bottom: 3em;
+  height: 110em;
+}
+
+#restaurants > h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#restaurants > .restaurantsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90%;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 23em;
+  -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.7);
+  border-radius: 2em;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .cardPhoto1 {
+  background: url(../Images/Restaurants/paletteGout.jpg);
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .cardPhoto2 {
+  background: url(../Images/Restaurants/noteEnchantee.jpg);
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .cardPhoto3 {
+  background: url(../Images/Restaurants/laFrancaise.jpg);
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .cardPhoto4 {
+  background: url(../Images/Restaurants/deliceSens.jpg);
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardPhoto {
+  height: 70%;
+  border-radius: 2em 2em 0 0;
+  background-position: center;
+  background-size: cover;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.5em;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--title > h2 {
+  margin-bottom: -.7em;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--title > p {
+  font-size: 1.2em;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1.2em;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fa-heart {
+  font-size: 2em;
+  position: absolute;
+  cursor: pointer;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
+  background: linear-gradient(#9356dc, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart:hover {
+  -webkit-animation: fullHeart 300ms ease-in-out both;
+          animation: fullHeart 300ms ease-in-out both;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart:hover + .emptyHeart {
+  -webkit-animation: emptyHeart 300ms ease-in-out both;
+          animation: emptyHeart 300ms ease-in-out both;
+}
+
+#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .emptyHeart {
+  opacity: 1;
+}
+
+@-webkit-keyframes fullHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fullHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes emptyHeart {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes emptyHeart {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /*# sourceMappingURL=index.css.map */

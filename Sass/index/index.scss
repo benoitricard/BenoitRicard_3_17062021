@@ -208,3 +208,105 @@ nav {
         }
     }
 }
+
+
+
+/***** Restaurants *****/
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em;
+    margin-bottom: 3em;
+    height: 110em;
+    > h1 {
+        font-size: $titleFontSize;
+        font-weight: bold;
+    }
+    > .restaurantsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90%;
+        > .restaurantsContainer__card {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 23em;
+            box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.7);
+            border-radius: 2em;
+            > .cardPhoto1 {
+                background: url(../Images/Restaurants/paletteGout.jpg);
+            }
+            > .cardPhoto2 {
+                background: url(../Images/Restaurants/noteEnchantee.jpg);
+            }
+            > .cardPhoto3 {
+                background: url(../Images/Restaurants/laFrancaise.jpg);
+            }
+            > .cardPhoto4 {
+                background: url(../Images/Restaurants/deliceSens.jpg);
+            }
+            > .restaurantsContainer__cardPhoto {
+                height: 70%;
+                border-radius: 2em 2em 0 0;
+                background-position: center;
+                background-size: cover;
+            }
+            > .restaurantsContainer__cardBottom {
+                height: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1.5em;
+                .restaurantsContainer__cardBottom--title > h2 {
+                    margin-bottom: -.7em;
+                }
+                .restaurantsContainer__cardBottom--title > p {
+                    font-size: 1.2em;
+                }
+            }
+            .restaurantsContainer__cardBottom--heart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1.2em;
+                .fa-heart {
+                    font-size: 2em;
+                    position: absolute;
+                    cursor: pointer;
+                }
+                .fullHeart {
+                    background: linear-gradient($primaryColor, $secondaryColor);
+                    -webkit-background-clip: text;
+	                -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    &:hover {
+                        animation: fullHeart 300ms ease-in-out both;
+                    }
+                    &:hover + .emptyHeart {
+                        animation: emptyHeart 300ms ease-in-out both;
+                    }
+                }
+                .emptyHeart {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@keyframes fullHeart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes emptyHeart {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
