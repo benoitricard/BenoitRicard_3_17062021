@@ -5,13 +5,13 @@
 body {
   margin: 0;
   background: white;
-  -webkit-animation: backgroundBody 1ms 151ms both;
-          animation: backgroundBody 1ms 151ms both;
+  -webkit-animation: backgroundBody 1ms 3150ms both;
+          animation: backgroundBody 1ms 3150ms both;
 }
 
 .fullPage {
-  -webkit-animation: fullPage 1ms 151ms backwards;
-          animation: fullPage 1ms 151ms backwards;
+  -webkit-animation: fullPage 1ms 3150ms backwards;
+          animation: fullPage 1ms 3150ms backwards;
 }
 
 /***** Loading Screen *****/
@@ -29,8 +29,8 @@ body {
           justify-content: center;
   width: 100%;
   height: 100%;
-  -webkit-animation: loadingScreen 1ms 151ms both;
-          animation: loadingScreen 1ms 151ms both;
+  -webkit-animation: loadingScreen 1ms 3150ms both;
+          animation: loadingScreen 1ms 3150ms both;
 }
 
 .loadingScreen > img {
@@ -47,8 +47,8 @@ body {
   border: solid 1.2em white;
   border-top: solid 1.2em #fface8;
   border-radius: 100%;
-  -webkit-animation: spinner 0.33333ms 150ms infinite both;
-          animation: spinner 0.33333ms 150ms infinite both;
+  -webkit-animation: spinner 1000ms 150ms infinite both;
+          animation: spinner 1000ms 150ms infinite both;
 }
 
 @-webkit-keyframes spinner {
