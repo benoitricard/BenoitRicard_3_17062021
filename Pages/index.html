@@ -6,7 +6,7 @@
         <!-- Titre de la page -->
         <title>OhMyFood! - Accueil</title>
         <!-- Fichier CSS lié -->
-        <link rel="stylesheet" type="text/css" href="../Styles/index.css">
+        <link rel="stylesheet" type="text/css" href="../Sass/index/index.css">
         <!-- Bibliothèque FontAwesome -->
         <script src="https://kit.fontawesome.com/2fda14c063.js" crossorigin="anonymous"></script>
         <!-- Polices -->
@@ -14,79 +14,138 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Shrikhand"> <!-- Shrikhand -->
     </head>
     <body>
-        <div class="spinner">
         <!-- Spinner -->
         <div class="loadingScreen">
             <img alt="Logo" src="../Pages/Images/Logo/logo--white.svg">
             <div class="loadingScreen__spinner"></div>
         </div>
-    </div>
         <div class="fullPage">
-            <!-- Header -->
-            <header>
-
-            </header>
-            <!-- Location -->
-            <section id="location">
-                <h3>Paris, Belleville</h3>
-            </section>
-            <!-- blocExplore -->
-            <section id="explore">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <button class="explore__btn">Explorer nos restaurants</button>
-            </section>
-            <!-- Nav -->
-            <nav>
-                <h1>Fonctionnement</h1>
-                <div class="navContainer">
-                    <div class="navContainer__elm">
-                        <button class="navContainer__elmBtn">Choisissez un restaurant</button>
-                    </div>
-                    <div class="navContainer__elm">
-                        <button class="navContainer__elmBtn">Composez votre menu</button>
-                    </div>
-                    <div class="navContainer__elm">
-                        <button class="navContainer__elmBtn">Dégustez au restaurant</button>
+        <!-- Header -->
+        <header>
+            <img alt="Logo" src="../Pages/Images/Logo/logo--black.svg">
+        </header>
+        <!-- Location -->
+        <section id="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Paris, Belleville</h3>
+        </section>
+        <!-- blocExplore -->
+        <section id="explore">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <button class="explore__btn">Explorer nos restaurants</button>
+        </section>
+        <!-- Nav -->
+        <nav>
+            <h1>Fonctionnement</h1>
+            <div class="navContainer">
+                <div class="navContainer__elm">
+                    <div class="navContainer__elmNb">1</div>
+                    <div class="navContainer__elmTxt">
+                        <i class="fas fa-mobile-alt navContainer__icon"></i>
+                        <p>Choisissez un restaurant</p>
                     </div>
                 </div>
-            </nav>
-            <!-- Restaurants -->
-            <section id="restaurants">
-                <h1>Restaurants</h1>
-                <div class="restaurantsContainer">
-                    <div class="restaurantsContainer__card">
-
-                    </div>
-                    <div class="restaurantsContainer__card">
-                        
-                    </div>
-                    <div class="restaurantsContainer__card">
-                        
-                    </div>
-                    <div class="restaurantsContainer__card">
-                        
+                <div class="navContainer__elm">
+                    <div class="navContainer__elmNb">2</div>
+                    <div class="navContainer__elmTxt">
+                        <i class="fas fa-list-ul navContainer__icon"></i>
+                        <p>Composez votre menu</p>
                     </div>
                 </div>
-            </section>
-            <!-- Footer -->
-            <footer>
-                <img alt="Logo" src="../Pages/Images/Logo/logo--white.svg">
-                <div class="footer__categories">
-                    <div class="footer__category">
-                        <p>Proposer un restaurant</p>
-                    </div>
-                    <div class="footer__category">
-                        <p>Devenir partenaire</p>
-                    </div>
-                    <div class="footer__category">
-                        <p>Mentions légales</p>
-                    </div>
-                    <div class="footer__category">
-                        <p>Contact</p>
+                <div class="navContainer__elm">
+                    <div class="navContainer__elmNb">3</div>
+                    <div class="navContainer__elmTxt">
+                        <i class="fas fa-store navContainer__icon"></i>
+                        <p>Dégustez au restaurant</p>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </nav>
+        <!-- Restaurants -->
+        <section id="restaurants">
+            <h1>Restaurants</h1>
+            <div class="restaurantsContainer"> <!-- Cards Container -->
+                <div class="restaurantsContainer__card"> <!-- Card 1 -->
+                    <a class="restaurantsContainer__cardLink" href="./restaurant1.html"><span></span></a>
+                    <div class="restaurantsContainer__cardNew">Nouveau</div>
+                    <div class="restaurantsContainer__cardPhoto"></div>
+                    <div class="restaurantsContainer__cardBottom">
+                        <div class="restaurantsContainer__cardBottom--title">
+                            <h2>La Palette du Goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurantsContainer__cardBottom--heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantsContainer__card"> <!-- Card 2 -->
+                    <a class="restaurantsContainer__cardLink" href="./restaurant2.html"><span></span></a>
+                    <div class="restaurantsContainer__cardNew">Nouveau</div>
+                    <div class="restaurantsContainer__cardPhoto"></div>
+                    <div class="restaurantsContainer__cardBottom">
+                        <div class="restaurantsContainer__cardBottom--title">
+                            <h2>La Palette du Goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurantsContainer__cardBottom--heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantsContainer__card"> <!-- Card 3 -->
+                    <a class="restaurantsContainer__cardLink" href="./restaurant3.html"><span></span></a>
+                    <div class="restaurantsContainer__cardPhoto"></div>
+                    <div class="restaurantsContainer__cardBottom">
+                        <div class="restaurantsContainer__cardBottom--title">
+                            <h2>La Palette du Goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurantsContainer__cardBottom--heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantsContainer__card"> <!-- Card 4 -->
+                    <a class="restaurantsContainer__cardLink" href="./restaurant4.html"><span></span></a>
+                    <div class="restaurantsContainer__cardPhoto"></div>
+                    <div class="restaurantsContainer__cardBottom">
+                        <div class="restaurantsContainer__cardBottom--title">
+                            <h2>La Palette du Goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurantsContainer__cardBottom--heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <img alt="Logo" src="../Pages/Images/Logo/logo--white.svg">
+            <div class="footerContainer">
+                <div class="footerContainer__category">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </div>
+                <div class="footerContainer__category">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Devenir partenaire</p>
+                </div>
+                <div class="footerContainer__category">
+                    <p>Mentions légales</p>
+                </div>
+                <div class="footerContainer__category">
+                    <p>Contact</p>
+                </div>
+            </div>
+        </footer>
         </div>
     </body>
 </html>
