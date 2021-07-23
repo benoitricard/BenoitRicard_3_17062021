@@ -564,6 +564,10 @@ footer > .footerContainer > .footerContainer__category {
 }
 
 footer > .footerContainer > .footerContainer__category > i {
-  margin-right: 1em;
+  position: absolute;
+}
+
+footer > .footerContainer > .footerContainer__categoryWicon > p {
+  margin-left: 2em;
 }
 /*# sourceMappingURL=index.css.map */

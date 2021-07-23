@@ -16,7 +16,6 @@ $titleFontSize: 2.5em;
 }
 body {
     margin: 0;
-    
     background: white;
     animation: backgroundBody 1ms $animDuration--loading+$animDelay--loading both;
 }
@@ -359,8 +358,11 @@ footer {
             align-items: center;
             margin-top: -1em;
             > i {
-                margin-right: 1em;
+                position: absolute;
             }
+        }
+        > .footerContainer__categoryWicon > p {
+            margin-left: 2em;
         }
     }
 }
