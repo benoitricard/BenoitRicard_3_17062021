@@ -2,7 +2,7 @@
 #photo {
   width: auto;
   height: 25em;
-  background: url(../Images/Restaurants/paletteGout.jpg);
+  background: url(../Images/Restaurants/laFrancaise.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -20,4 +20,4 @@
 footer {
   margin-top: 95em;
 }
-/*# sourceMappingURL=restaurant1.css.map */
+/*# sourceMappingURL=restaurant3.css.map */

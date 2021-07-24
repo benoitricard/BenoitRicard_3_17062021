@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,mBAAmB;AACnB,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,0CAA0C;EACtD,mBAAmB,EAAE,MAAM;EAC3B,eAAe,EAAE,KAAK;CACvB;;AAIH,kBAAkB;AAClB,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,IAAI;CACf;;AACD,AAAA,aAAa,CAAC;EACV,MAAM,EAAE,IAAI;CACf;;AAID,oBAAoB;AACpB,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,IAAI;CACnB",
     "sources": [
-        "restaurant1.scss"
+        "restaurant3.scss"
     ],
     "names": [],
-    "file": "restaurant1.css"
+    "file": "restaurant3.css"
 }

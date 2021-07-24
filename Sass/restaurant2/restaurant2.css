@@ -2,22 +2,26 @@
 #photo {
   width: auto;
   height: 25em;
-  background: url(../Images/Restaurants/paletteGout.jpg);
+  background: url(../Images/Restaurants/noteEnchantee.jpg);
   background-position: center;
   background-size: cover;
 }
 
 /***** Menu *****/
 #menu {
-  height: 95em;
+  height: 101em;
 }
 
 .menuCategory {
   height: 23em;
 }
 
+.menuCategory1 {
+  height: 29em;
+}
+
 /***** Footer *****/
 footer {
-  margin-top: 95em;
+  margin-top: 101em;
 }
-/*# sourceMappingURL=restaurant1.css.map */
+/*# sourceMappingURL=restaurant2.css.map */
