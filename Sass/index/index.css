@@ -134,17 +134,15 @@ body {
 }
 
 /***** Header *****/
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 5em;
+header > h1 {
+  font-family: 'Shrikhand';
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: lighter;
+  text-align: center;
+  height: 2em;
+  line-height: 2em;
+  background: white;
 }
 
 /***** Location *****/

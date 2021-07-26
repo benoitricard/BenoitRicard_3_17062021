@@ -19,14 +19,23 @@ body {
 
 /***** Header *****/
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5em;
-    background: white;
     > a {
+        margin-left: 1em;
+        line-height: 3.1em;
+        position: absolute;
         color: black;
+        height: 3.1em;
         font-size: 1.5em;
+    }
+    > h1 {
+        font-family: 'Shrikhand';
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: lighter;
+        text-align: center;
+        height: 2em;
+        line-height: 2em;
+        background: white;
     }
 }
 
@@ -59,8 +68,28 @@ header {
             font-family: 'Shrikhand';
             font-size: 2.2em;
         }
-        > i {
-            font-size: 2em;
+        &--heart {
+            width: 2em;
+            height: 2em;
+            .fa-heart {
+                font-size: 2em;
+                position: absolute;
+                cursor: pointer;
+                transition: opacity 500ms ease-in-out;
+            }
+            .fullHeart {
+                opacity: 0;
+                &:hover {
+                    animation: fill 300ms ease-in-out;
+                    display: inline-block;
+                    opacity: 1;
+                    background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+                    background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color:transparent;
+                    font-weight: bold;
+                }
+            }
         }
     }
     .menuCategory {
@@ -86,6 +115,18 @@ header {
             flex-direction: column;
             justify-content: space-between;
             height: 90%;
+            :nth-child(1) {
+                animation-delay: 100ms;
+            }
+            :nth-child(2) {
+                animation-delay: 250ms;
+            }
+            :nth-child(3) {
+                animation-delay: 400ms;
+            }
+            :nth-child(4) {
+                animation-delay: 550ms;
+            }
             &Item {
                 cursor: pointer;
                 display: flex;
@@ -95,6 +136,7 @@ header {
                 border-radius: 1em;
                 box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.7);
                 overflow: hidden;
+                animation: appearance 1000ms ease-in-out backwards;
                 &__description {
                     display: flex;
                     padding: 0 0 0 1.2em;
@@ -125,7 +167,7 @@ header {
                     text-align: right;
                     width: 25%;
                     max-height: 100%;
-                    transform: translateX(80%);
+                    transform: translateX(70%);
                     transition: transform 500ms ease-in-out;
                     > p {
                         font-size: 1.1em;
@@ -193,6 +235,16 @@ header {
     }
     to {
         width: 75%;
+    }
+}
+@keyframes appearance {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 
