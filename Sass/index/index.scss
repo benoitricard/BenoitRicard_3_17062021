@@ -19,6 +19,13 @@ body {
     background: white;
     animation: backgroundBody 1ms $animDuration--loading+$animDelay--loading both;
 }
+.a--footer {
+    text-decoration: none;
+    color: white;
+    &:visited {
+        color: white;
+    }
+}
 .fullPage {
     animation: fullPage 1ms $animDuration--loading+$animDelay--loading backwards;
 }
@@ -297,31 +304,31 @@ nav {
                 .restaurantsContainer__cardBottom--title > p {
                     font-size: 1.2em;
                 }
-            }
-            .restaurantsContainer__cardBottom--heart {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 1.2em;
-                .fa-heart {
-                    font-size: 2em;
-                    position: absolute;
-                    cursor: pointer;
-                }
-                .fullHeart {
-                    background: linear-gradient($primaryColor, $secondaryColor);
-                    -webkit-background-clip: text;
-	                -webkit-text-fill-color: transparent;
-                    opacity: 0;
-                    &:hover {
-                        animation: fullHeart 300ms ease-in-out both;
+                .restaurantsContainer__cardBottom--heart {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2em;
+                    height: 2em;
+                    .fa-heart {
+                        font-size: 2em;
+                        position: absolute;
+                        cursor: pointer;
                     }
-                    &:hover + .emptyHeart {
-                        animation: emptyHeart 300ms ease-in-out both;
+                    .fullHeart {
+                        font-size: 2.15em;
+                        margin-top: .05em;
+                        background: linear-gradient($primaryColor, $secondaryColor);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        opacity: 0;
+                        &:hover {
+                            animation: fullHeart 500ms ease-in-out both;
+                        }
+                        &:not(:hover) {
+                            animation: fullHeartReverse 500ms ease-in-out both;
+                        }
                     }
-                }
-                .emptyHeart {
-                    opacity: 1;
                 }
             }
         }
@@ -335,7 +342,7 @@ nav {
         opacity: 1;
     }
 }
-@keyframes emptyHeart {
+@keyframes fullHeartReverse {
     from {
         opacity: 1;
     }

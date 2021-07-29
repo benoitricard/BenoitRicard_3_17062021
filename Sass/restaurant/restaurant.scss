@@ -11,6 +11,13 @@ body {
     margin: 0;
     background: #eeeeee;
 }
+.a--footer {
+    text-decoration: none;
+    color: white;
+    &:visited {
+        color: white;
+    }
+}
 .bold {
     font-weight: bold;
 }
@@ -69,25 +76,27 @@ header {
             font-size: 2.2em;
         }
         &--heart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 2em;
             height: 2em;
             .fa-heart {
                 font-size: 2em;
                 position: absolute;
                 cursor: pointer;
-                transition: opacity 500ms ease-in-out;
             }
             .fullHeart {
+                font-size: 2.15em;
+                background: linear-gradient($primaryColor, $secondaryColor);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 opacity: 0;
                 &:hover {
-                    animation: fill 300ms ease-in-out;
-                    display: inline-block;
-                    opacity: 1;
-                    background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                    background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color:transparent;
-                    font-weight: bold;
+                    animation: fullHeart 500ms ease-in-out both;
+                }
+                &:not(:hover) {
+                    animation: fullHeartReverse 500ms ease-in-out both;
                 }
             }
         }
@@ -245,6 +254,22 @@ header {
     to {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+@keyframes fullHeart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fullHeartReverse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 

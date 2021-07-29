@@ -9,6 +9,15 @@ body {
           animation: backgroundBody 1ms 3150ms both;
 }
 
+.a--footer {
+  text-decoration: none;
+  color: white;
+}
+
+.a--footer:visited {
+  color: white;
+}
+
 .fullPage {
   -webkit-animation: fullPage 1ms 3150ms backwards;
           animation: fullPage 1ms 3150ms backwards;
@@ -449,7 +458,7 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   font-size: 1.2em;
 }
 
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart {
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,16 +468,19 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 1.2em;
+  width: 2em;
+  height: 2em;
 }
 
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fa-heart {
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--heart .fa-heart {
   font-size: 2em;
   position: absolute;
   cursor: pointer;
 }
 
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart {
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--heart .fullHeart {
+  font-size: 2.15em;
+  margin-top: .05em;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
   background: linear-gradient(#9356dc, #FF79DA);
   -webkit-background-clip: text;
@@ -476,18 +488,14 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   opacity: 0;
 }
 
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart:hover {
-  -webkit-animation: fullHeart 300ms ease-in-out both;
-          animation: fullHeart 300ms ease-in-out both;
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--heart .fullHeart:hover {
+  -webkit-animation: fullHeart 500ms ease-in-out both;
+          animation: fullHeart 500ms ease-in-out both;
 }
 
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .fullHeart:hover + .emptyHeart {
-  -webkit-animation: emptyHeart 300ms ease-in-out both;
-          animation: emptyHeart 300ms ease-in-out both;
-}
-
-#restaurants > .restaurantsContainer > .restaurantsContainer__card .restaurantsContainer__cardBottom--heart .emptyHeart {
-  opacity: 1;
+#restaurants > .restaurantsContainer > .restaurantsContainer__card > .restaurantsContainer__cardBottom .restaurantsContainer__cardBottom--heart .fullHeart:not(:hover) {
+  -webkit-animation: fullHeartReverse 500ms ease-in-out both;
+          animation: fullHeartReverse 500ms ease-in-out both;
 }
 
 @-webkit-keyframes fullHeart {
@@ -508,7 +516,7 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   }
 }
 
-@-webkit-keyframes emptyHeart {
+@-webkit-keyframes fullHeartReverse {
   from {
     opacity: 1;
   }
@@ -517,7 +525,7 @@ nav > .navContainer > .navContainer__elm .navContainer__elmTxt > p {
   }
 }
 
-@keyframes emptyHeart {
+@keyframes fullHeartReverse {
   from {
     opacity: 1;
   }

@@ -7,6 +7,15 @@ body {
   background: #eeeeee;
 }
 
+.a--footer {
+  text-decoration: none;
+  color: white;
+}
+
+.a--footer:visited {
+  color: white;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -69,6 +78,15 @@ header > h1 {
 }
 
 #menu .menuTitle--heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 2em;
   height: 2em;
 }
@@ -77,25 +95,25 @@ header > h1 {
   font-size: 2em;
   position: absolute;
   cursor: pointer;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
 }
 
 #menu .menuTitle--heart .fullHeart {
+  font-size: 2.15em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
+  background: linear-gradient(#9356dc, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 
 #menu .menuTitle--heart .fullHeart:hover {
-  -webkit-animation: fill 300ms ease-in-out;
-          animation: fill 300ms ease-in-out;
-  display: inline-block;
-  opacity: 1;
-  background: -webkit-gradient(linear, right top, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  -webkit-animation: fullHeart 500ms ease-in-out both;
+          animation: fullHeart 500ms ease-in-out both;
+}
+
+#menu .menuTitle--heart .fullHeart:not(:hover) {
+  -webkit-animation: fullHeartReverse 500ms ease-in-out both;
+          animation: fullHeartReverse 500ms ease-in-out both;
 }
 
 #menu .menuCategory {
@@ -359,6 +377,42 @@ header > h1 {
     opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes fullHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fullHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fullHeartReverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fullHeartReverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
