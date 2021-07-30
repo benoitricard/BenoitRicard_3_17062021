@@ -1,10 +1,25 @@
-/***** Photo *****/
-#photo {
-  width: auto;
-  height: 25em;
+@media (max-width: 1024px) {
+  /***** Photo *****/
+  #photo {
+    width: auto;
+    height: 25em;
+    background: url(../Images/Restaurants/paletteGout.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  /***** Footer *****/
+  footer {
+    margin-top: 95em;
+  }
+}
+
+.photoAndMenu {
   background: url(../Images/Restaurants/paletteGout.jpg);
-  background-position: center;
+  background-position: 25% 75%;
   background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.5);
 }
 
 /***** Menu *****/
@@ -14,10 +29,5 @@
 
 .menuCategory {
   height: 23em;
-}
-
-/***** Footer *****/
-footer {
-  margin-top: 95em;
 }
 /*# sourceMappingURL=restaurant1.css.map */

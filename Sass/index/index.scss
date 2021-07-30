@@ -2,7 +2,7 @@ $primaryColor: #9356dc;
 $secondaryColor: #FF79DA;
 $thirdColor: #99E2D0;
 
-$animDuration--loading: 1ms;
+$animDuration--loading: 3000ms;
 $animDelay--loading: 150ms;
 
 $circleSpinnerSize: 35vh;
@@ -403,11 +403,10 @@ footer {
 
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1024.5px) {
 .exploreAndNav {
     display: flex;
     height: 28em;
-    background: linear-gradient(-60deg, $primaryColor, $secondaryColor);
 }
 
 
@@ -427,9 +426,6 @@ footer {
 nav {
     height: 100%;
     width: 60%;
-    > h1 {
-        color: white;
-    }
     .navContainer__elmNb {
         box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.7);
     }

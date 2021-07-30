@@ -1,3 +1,4 @@
+@media (max-width: 1024px) {
 /***** Photo *****/
 #photo {
     width: auto;
@@ -5,7 +6,25 @@
     background: url(../Images/Restaurants/deliceSens.jpg);
     background-position: center;
     background-size: cover;
-  }
+}
+
+
+
+/***** Footer *****/
+footer {
+    margin-top: 95em;
+}
+}
+
+
+
+.photoAndMenu {
+    background: url(../Images/Restaurants/deliceSens.jpg);
+    background-position: 25% 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 5px 8px -5px rgba(0,0,0,0.5);
+}
 
 
 
@@ -15,11 +34,4 @@
 }
 .menuCategory {
     height: 23em;
-}
-
-
-
-/***** Footer *****/
-footer {
-    margin-top: 95em;
 }

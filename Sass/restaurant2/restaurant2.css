@@ -1,10 +1,25 @@
-/***** Photo *****/
-#photo {
-  width: auto;
-  height: 25em;
+@media (max-width: 1024px) {
+  /***** Photo *****/
+  #photo {
+    width: auto;
+    height: 25em;
+    background: url(../Images/Restaurants/noteEnchantee.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  /***** Footer *****/
+  footer {
+    margin-top: 101em;
+  }
+}
+
+.photoAndMenu {
   background: url(../Images/Restaurants/noteEnchantee.jpg);
-  background-position: center;
+  background-position: left;
   background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.5);
 }
 
 /***** Menu *****/
@@ -18,10 +33,5 @@
 
 .menuCategory1 {
   height: 29em;
-}
-
-/***** Footer *****/
-footer {
-  margin-top: 101em;
 }
 /*# sourceMappingURL=restaurant2.css.map */
