@@ -111,89 +111,72 @@ header {
             flex-direction: column;
             justify-content: space-between;
             height: 90%;
-            :nth-child(1) {
-                animation-delay: 100ms;
+            .card1 {
+                animation: appearance 1000ms 100ms ease-in-out backwards;
             }
-            :nth-child(2) {
-                animation-delay: 250ms;
+            .card2 {
+                animation: appearance 1000ms 250ms ease-in-out backwards;
             }
-            :nth-child(3) {
-                animation-delay: 400ms;
+            .card3 {
+                animation: appearance 1000ms 400ms ease-in-out backwards;
             }
-            :nth-child(4) {
-                animation-delay: 550ms;
+            .card4 {
+                animation: appearance 1000ms 550ms ease-in-out backwards;
             }
-            &Item {
+            .card {
                 cursor: pointer;
+                border-radius: .7em;
+                margin-bottom: .8em;
+                padding: 0 1em;
+                font-size: 1.3em;
                 display: flex;
-                max-width: 100%;
-                max-height: 5em;
+                justify-content: space-between;
+                height: 4em;
                 background: white;
-                border-radius: 1em;
                 box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.7);
                 overflow: hidden;
-                animation: appearance 1000ms ease-in-out backwards;
-                &__description {
-                    display: flex;
-                    padding: 0 0 0 1.2em;
-                    flex-direction: column;
-                    justify-content: center;
-                    min-width: 35%;
-                    width: 200%;
-                    max-height: 100%;
+                .description {
+                    align-self: center;
+                    max-width: 90%;
                     overflow: hidden;
                     white-space: nowrap;
-                    > p {
+                    > h3 {
+                        margin-bottom: -15px;
+                        overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                    > .title {
-                        font-size: 1.3em;
-                        margin-top: 2em;
-                        margin-bottom: -.5em;
-                    }
-                    > .ingredients {
-                        font-size: 1.1em;
-                        margin-bottom: 2.5em;
-                    }
-                }
-                &:hover > .menuCategory--cardsItem__description {
-                    animation: titleWidth 500ms ease-in-out both;
-                }
-                &__price {
-                    text-align: right;
-                    width: 25%;
-                    max-height: 100%;
-                    transform: translateX(70%);
-                    transition: transform 500ms ease-in-out;
                     > p {
-                        font-size: 1.1em;
-                        margin-right: 1.2em;
-                        margin-top: 2.5em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
-                &:hover > .menuCategory--cardsItem__price {
-                    transform: translateX(0);
-                }
-                &__validator {
+                .price {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
-                    background: $thirdColor;
-                    width: 20%;
-                    transform: translateX(100%);
-                    transition: transform 500ms ease-in-out;
-                    > i {
-                        color: white;
-                        font-size: 2em;
-                        transition: transform 500ms ease-in-out;
+                    transition: transform 500ms linear;
+                    margin-right: -1em;
+                    margin-left: 1.2em;
+                    > p {
+                        align-self: flex-end;
+                        margin-bottom: 10px;
+                        margin-right: 1em;
                     }
-                }
-                &:hover > .menuCategory--cardsItem__validator {
-                    transform: translateX(0);
-                }
-                &:hover > .menuCategory--cardsItem__validator > i {
-                    transform: rotate(360deg);
+                    .validator {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transform-origin: right;
+                        border-radius: 0 .7em .7em 0;
+                        background: $thirdColor;
+                        width: 0;
+                        animation: validateurReverse 300ms 100ms linear backwards;
+                        > i {
+                            color: white;
+                            font-size: 2em;
+                            opacity: 0;
+                            animation: validateurIconReverse 100ms 150ms linear backwards,
+                            validateurRotateReverse 300ms linear backwards;
+                        }
+                    }
                 }
             }
         }
@@ -225,14 +208,16 @@ header {
         }
     }
 }
-@keyframes titleWidth {
-    from {
-        width: 200%;
-    }
-    to {
-        width: 75%;
-    }
+
+.card:hover > .price > .validator {
+    animation: validateur 300ms linear both !important;
 }
+.card:hover > .price > .validator > i {
+    animation: validateurIcon 100ms 100ms linear both,
+    validateurRotate 300ms 100ms linear both !important;
+}
+
+
 @keyframes appearance {
     from {
         transform: translateY(50%);
@@ -244,20 +229,36 @@ header {
     }
 }
 @keyframes fullHeart {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 @keyframes fullHeartReverse {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes validateur {
+    from {width: 0;}
+    to {width: 80px;}
+}
+@keyframes validateurReverse {
+    from {width: 80px;}
+    to {width: 0;}
+}
+@keyframes validateurIcon {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes validateurIconReverse {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes validateurRotate {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+@keyframes validateurRotateReverse {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0);}
 }
 
 

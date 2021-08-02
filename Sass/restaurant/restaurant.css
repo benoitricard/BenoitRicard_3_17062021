@@ -146,105 +146,85 @@ header > h1 {
   height: 90%;
 }
 
-#menu .menuCategory--cards :nth-child(1) {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+#menu .menuCategory--cards .card1 {
+  -webkit-animation: appearance 1000ms 100ms ease-in-out backwards;
+          animation: appearance 1000ms 100ms ease-in-out backwards;
 }
 
-#menu .menuCategory--cards :nth-child(2) {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
+#menu .menuCategory--cards .card2 {
+  -webkit-animation: appearance 1000ms 250ms ease-in-out backwards;
+          animation: appearance 1000ms 250ms ease-in-out backwards;
 }
 
-#menu .menuCategory--cards :nth-child(3) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+#menu .menuCategory--cards .card3 {
+  -webkit-animation: appearance 1000ms 400ms ease-in-out backwards;
+          animation: appearance 1000ms 400ms ease-in-out backwards;
 }
 
-#menu .menuCategory--cards :nth-child(4) {
-  -webkit-animation-delay: 550ms;
-          animation-delay: 550ms;
+#menu .menuCategory--cards .card4 {
+  -webkit-animation: appearance 1000ms 550ms ease-in-out backwards;
+          animation: appearance 1000ms 550ms ease-in-out backwards;
 }
 
-#menu .menuCategory--cardsItem {
+#menu .menuCategory--cards .card {
   cursor: pointer;
+  border-radius: .7em;
+  margin-bottom: .8em;
+  padding: 0 1em;
+  font-size: 1.3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%;
-  max-height: 5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4em;
   background: white;
-  border-radius: 1em;
   -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.7);
   overflow: hidden;
-  -webkit-animation: appearance 1000ms ease-in-out backwards;
-          animation: appearance 1000ms ease-in-out backwards;
 }
 
-#menu .menuCategory--cardsItem__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 0 0 1.2em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-width: 35%;
-  width: 200%;
-  max-height: 100%;
+#menu .menuCategory--cards .card .description {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 90%;
   overflow: hidden;
   white-space: nowrap;
 }
 
-#menu .menuCategory--cardsItem__description > p {
+#menu .menuCategory--cards .card .description > h3 {
+  margin-bottom: -15px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-#menu .menuCategory--cardsItem__description > .title {
-  font-size: 1.3em;
-  margin-top: 2em;
-  margin-bottom: -.5em;
+#menu .menuCategory--cards .card .description > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#menu .menuCategory--cardsItem__description > .ingredients {
-  font-size: 1.1em;
-  margin-bottom: 2.5em;
+#menu .menuCategory--cards .card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+  margin-right: -1em;
+  margin-left: 1.2em;
 }
 
-#menu .menuCategory--cardsItem:hover > .menuCategory--cardsItem__description {
-  -webkit-animation: titleWidth 500ms ease-in-out both;
-          animation: titleWidth 500ms ease-in-out both;
+#menu .menuCategory--cards .card .price > p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+  margin-right: 1em;
 }
 
-#menu .menuCategory--cardsItem__price {
-  text-align: right;
-  width: 25%;
-  max-height: 100%;
-  -webkit-transform: translateX(70%);
-          transform: translateX(70%);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
-
-#menu .menuCategory--cardsItem__price > p {
-  font-size: 1.1em;
-  margin-right: 1.2em;
-  margin-top: 2.5em;
-}
-
-#menu .menuCategory--cardsItem:hover > .menuCategory--cardsItem__price {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-#menu .menuCategory--cardsItem__validator {
+#menu .menuCategory--cards .card .price .validator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,34 +234,21 @@ header > h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  border-radius: 0 .7em .7em 0;
   background: #99E2D0;
-  width: 20%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  width: 0;
+  -webkit-animation: validateurReverse 300ms 100ms linear backwards;
+          animation: validateurReverse 300ms 100ms linear backwards;
 }
 
-#menu .menuCategory--cardsItem__validator > i {
+#menu .menuCategory--cards .card .price .validator > i {
   color: white;
   font-size: 2em;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
-
-#menu .menuCategory--cardsItem:hover > .menuCategory--cardsItem__validator {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-#menu .menuCategory--cardsItem:hover > .menuCategory--cardsItem__validator > i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  opacity: 0;
+  -webkit-animation: validateurIconReverse 100ms 150ms linear backwards, validateurRotateReverse 300ms linear backwards;
+          animation: validateurIconReverse 100ms 150ms linear backwards, validateurRotateReverse 300ms linear backwards;
 }
 
 #menu .command {
@@ -325,22 +292,14 @@ header > h1 {
           transform: scale(1.1);
 }
 
-@-webkit-keyframes titleWidth {
-  from {
-    width: 200%;
-  }
-  to {
-    width: 75%;
-  }
+.card:hover > .price > .validator {
+  -webkit-animation: validateur 300ms linear both !important;
+          animation: validateur 300ms linear both !important;
 }
 
-@keyframes titleWidth {
-  from {
-    width: 200%;
-  }
-  to {
-    width: 75%;
-  }
+.card:hover > .price > .validator > i {
+  -webkit-animation: validateurIcon 100ms 100ms linear both, validateurRotate 300ms 100ms linear both !important;
+          animation: validateurIcon 100ms 100ms linear both, validateurRotate 300ms 100ms linear both !important;
 }
 
 @-webkit-keyframes appearance {
@@ -402,6 +361,122 @@ header > h1 {
   }
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes validateur {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes validateur {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@-webkit-keyframes validateurReverse {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes validateurReverse {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes validateurIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes validateurIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes validateurIconReverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes validateurIconReverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes validateurRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes validateurRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes validateurRotateReverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes validateurRotateReverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
